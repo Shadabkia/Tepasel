@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tepasel"
+    namespace = "com.example.tapsel"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.tepasel"
+        applicationId = "com.example.tapsel"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

@@ -36,7 +36,6 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/logoImageView"
-            app:layout_constraintMarginStart="16dp"
             app:layout_constraintStart_toEndOf="@id/logoImageView"
             app:layout_constraintTop_toTopOf="@id/logoImageView" />
 
@@ -76,7 +75,6 @@
             android:textColor="#B4B3B3"
             android:text="Install the Daria Offers app."
             app:layout_constraintEnd_toStartOf="@+id/priceTextView"
-            app:layout_constraintMarginTop="8dp"
             app:layout_constraintStart_toStartOf="@+id/logoImageView"
             app:layout_constraintTop_toTopOf="@+id/view" />
 

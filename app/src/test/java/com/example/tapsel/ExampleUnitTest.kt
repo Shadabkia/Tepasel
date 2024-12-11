@@ -1,4 +1,4 @@
-package com.example.tepasel
+package com.example.tapsel
 
 import org.junit.Test
 

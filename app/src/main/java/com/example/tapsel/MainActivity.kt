@@ -1,11 +1,15 @@
-package com.example.tepasel
+package com.example.tapsel
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.tapsel.R
 import ir.tapsell.plus.TapsellPlus
 import ir.tapsell.plus.TapsellPlusInitListener
 import ir.tapsell.plus.model.AdNetworkError
@@ -26,16 +30,22 @@ class MainActivity : AppCompatActivity() {
         TapsellPlus.initialize(this, key,
             object : TapsellPlusInitListener {
                 override fun onInitializeSuccess(p0: AdNetworks?) {
+                    TapsellPlus.setGDPRConsent(this@MainActivity, true)
+                    TapsellPlus.setDebugMode(Log.DEBUG)
+                    Toast.makeText(this@MainActivity, "OnInitializeSuccess", Toast.LENGTH_SHORT)
+                        .show()
                     Log.d("onInitializeSuccess", p0?.name ?: "");
                 }
 
                 override fun onInitializeFailed(p0: AdNetworks?, p1: AdNetworkError?) {
-                    Log.d("onInitializeSuccess", p0?.name ?: "");
+                    Log.d("onInitializeFailed", p0?.name ?: "");
                 }
 
             })
 
-        TapsellPlus.setDebugMode(Log.DEBUG)
+        findViewById<Button>(R.id.button2).setOnClickListener {
+            startActivity(Intent(this, NativeBannerActivity::class.java))
+        }
 
     }
 }

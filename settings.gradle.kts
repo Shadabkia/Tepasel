@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Tepasel"
+rootProject.name = "Tapsel"
 include(":app")
